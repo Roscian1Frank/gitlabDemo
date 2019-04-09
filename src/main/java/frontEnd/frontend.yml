@@ -1,0 +1,23 @@
+image: maven:latest
+
+stages:
+  - build
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
+build_frontend:
+  stage: build
+  script:
+    - mvn compile
+  only:
+    changes:
+      - /src/main/java/frontEnd/**/*
+
+
+

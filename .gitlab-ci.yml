@@ -1,3 +1,8 @@
+include:
+  - local: /src/main/java/backEnd/backend.yml
+  - local: /src/main/java/frontEnd/frontend.yml
+  - local: /src/test/java/test.yml
+
 image: maven:latest
 
 stages:

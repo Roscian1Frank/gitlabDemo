@@ -1,0 +1,21 @@
+image: maven:latest
+
+stages:
+  - test
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
+test_job:
+  stage: test
+  script:
+    - mvn test
+  only:
+    changes:
+      - /src/main/java/backEnd/**/*
+      - /src/main/java/frontEnd/**/*
