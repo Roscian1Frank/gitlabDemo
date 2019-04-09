@@ -17,5 +17,5 @@ test_job:
     - mvn test
   only:
     changes:
-      - /src/main/java/backEnd/**/*
-      - /src/main/java/frontEnd/**/*
+      - backEnd/**/*
+      - frontEnd/**/*
