@@ -13,4 +13,4 @@ build_backend:
     - mvn compile
   only:
     changes:
-      - /src/main/java/backEnd/**/*
+      - demo/src/main/java/backEnd/**/*

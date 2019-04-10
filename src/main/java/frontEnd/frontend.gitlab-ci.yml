@@ -13,4 +13,4 @@ build_frontend:
     - mvn compile
   only:
     changes:
-      - /src/main/java/frontEnd/**/*
+      - demo/src/main/java/frontEnd/**/*
