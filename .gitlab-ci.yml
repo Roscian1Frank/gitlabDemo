@@ -1,8 +1,3 @@
-include:
-  - local: '/src/main/java/backEnd/backend.yml'
-  - local: '/src/main/java/frontEnd/frontend.yml'
-  - local: '/src/test/java/test.yml'
-
 image: maven:latest
 
 stages:
@@ -22,3 +17,28 @@ run:
   stage: run
   script:
     - mvn package
+
+build_backend:
+  stage: build
+  script:
+    - mvn compile
+  only:
+    changes:
+      - /src/main/java/backEnd/**/*
+
+build_frontend:
+  stage: build
+  script:
+    - mvn compile
+  only:
+    changes:
+      - /src/main/java/frontEnd/**/*
+
+test_job:
+  stage: test
+  script:
+    - mvn test
+  only:
+    changes:
+      - /src/main/java/frontEnd/**/*
+      - /src/main/java/backEnd/**/*
