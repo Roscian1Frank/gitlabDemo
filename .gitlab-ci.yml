@@ -1,7 +1,7 @@
 include:
-  - local: '/src/main/java/backEnd/backend.yml'
-  - local: '/src/main/java/frontEnd/frontend.yml'
-  - local: '/src/test/java/test.yml'
+  - local: '/src/main/java/backEnd/backend.gitlab-ci.yml'
+  - local: '/src/main/java/frontEnd/frontend.gitlab-ci.yml'
+  - local: '/src/test/java/test.gitlab-ci.yml'
 
 
 stages:
