@@ -24,7 +24,7 @@ build_backend:
     - mvn compile
   only:
     changes:
-      - /src/main/java/backEnd/**/*
+      - backEnd/**/*
 
 build_frontend:
   stage: build
@@ -32,7 +32,7 @@ build_frontend:
     - mvn compile
   only:
     changes:
-      - /src/main/java/frontEnd/**/*
+      - frontEnd/**/*
 
 test_job:
   stage: test
@@ -40,5 +40,5 @@ test_job:
     - mvn test
   only:
     changes:
-      - /src/main/java/frontEnd/**/*
-      - /src/main/java/backEnd/**/*
+      - frontEnd/**/*
+      - backEnd/**/*
