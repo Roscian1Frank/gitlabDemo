@@ -1,8 +1,3 @@
-image: maven:latest
-
-stages:
-  - test
-
 variables:
   MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
 
@@ -12,6 +7,7 @@ cache:
     - target/
 
 test_job:
+  image: maven:latest
   stage: test
   script:
     - mvn test
