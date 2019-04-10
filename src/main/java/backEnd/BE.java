@@ -3,6 +3,6 @@ package backEnd;
 public class BE {
     public static String name = "Backend";
     public static void printBE() {
-        System.out.println("Updated " +name);
+        System.out.println("Hello from " +name);
     }
 }
